@@ -1,0 +1,37 @@
+ <h1>Notes <a href="/#/notes/new" class="btn btn-default">New Note</a></h1>
+ 
+<!--{{ data }}-->
+	
+        <div class="form-group">
+            Search: <input type="text">
+        </div>
+	
+        <div class="row">
+            <div class="col-md-6" ng-repeat="note in data">
+<!--                {{note.description}}-->
+               <nw-note title="note.title" link=" '/#/notes/'+ note.id" decsription="note.description" category="{{note.category.name}}"></nw-note>
+               
+<!--
+                <h2><a href="">{{ note.title }}</a></h2>
+                <p>{{ note.description }}</p>
+                <p><span class="label label-info">{{ note.category.name }}
+                </span></p>
+-->
+            </div>
+        </div>
+        
+       <!-- New CODE FROM VIDEO-->
+<!--
+       <div class="note-wrapper">
+           <a class="card-notes" ng-repeat="note in indexController.notes">
+               <div class="card" title='{{note.title}}'>
+                   
+                   <div ng-if='icon'>
+                       <i class='icon-card {{note.icon}}'></i>
+                    </div>
+                           
+                    <h2 class="h3">{{note.title}}</h2>
+
+               </div>
+           </a>
+       </div>-->
